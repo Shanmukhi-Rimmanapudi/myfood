@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Boxes</title>
+  <style>
+    .parent {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; 
+      box-sizing: border-box;
+      width: 100%;
+      height: 100vh;
+      border: 2px solid gray;
+      gap: 5px;
+    }
+    .parent div {
+      border: 1px solid gray; 
+      
+    }
+    .child1{
+        background-color: rgb(34, 255, 0);
+    }
+    .child2{
+        background-color:rgb(243, 138, 9) ;
+    }
+    .child3{
+        background-color: rgb(37, 43, 219);
+    }
+    @media screen and (min-width:320px) and (max-width: 425px) {
+      .parent {
+        grid-template-columns: 1fr; 
+      }
+    }
+    @media screen and (min-width: 425px) and (max-width: 768px) {
+      .parent {
+        grid-template-columns: 1fr 1fr; 
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child1"></div>
+    <div class="child2"></div>
+    <div class="child3"></div>
+  </div>
+  
+</body>
+</html>
